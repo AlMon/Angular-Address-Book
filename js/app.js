@@ -13,11 +13,6 @@ ab.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", "localSt
     url: "/",
     templateUrl: "views/home.html",
     controller: "ContactsCtrl"
-  })
-  .state("contact", {
-    url: "/:id",
-    templateUrl: "views/contact.html",
-    controller: "ContactsCtrl"
   });
   
 }]);

@@ -10,14 +10,34 @@
         <button name="submit" ng-disabled="contactForm.$invalid" class="add-btn">Add Contact</button>
       </div>
     </form>
-  </div>
-  <div class="col-3" ng-repeat="contact in contacts">    
-    <div>
-      <p ng-show="contact.name"><i class="fa fa-user icon" aria-hidden="true"></i> | {{contact.name}}</p>
-      <p ng-show="contact.phone || contact.phoneTwo"><i class="fa fa-mobile icon" aria-hidden="true"></i> | {{contact.phone}} <span ng-show="contact.phone && contact.phoneTwo">//</span> {{contact.phoneTwo}}</p>
-      <p ng-show="contact.email"><i class="fa fa-envelope icon" aria-hidden="true"></i> | {{contact.email}}</p>
-      <p ng-show="contact.address"><i class="fa fa-location-arrow icon" aria-hidden="true"></i> | {{contact.address}}</p>
-      <button ng-click="deleteContact($index)" class="delete-btn">Delete</button>
+      
+    <div class="text-center">
+      <hr id="search-sep">
+      <i class="fa fa-search icon" aria-hidden="true" style="font-size: 15px;"></i>
+      <input type="text" placeholder="Search Contacts" ng-model="search" />
     </div>
+  </div>
+  <div class="col-3" ng-repeat="contact in contacts | filter: search">    
+    <form editable-form name="contactDetails" onaftersave="updateContact()" class="card">
+      <p editable-text="contact.name" e-name="name" e-placeholder="Name" e-required class="text-center contact-name">{{contact.name}}</p>
+      <p editable-text="contact.phone" ng-show="contact.phone" e-placeholder="Phone Number"><i class="fa fa-mobile icon" aria-hidden="true"></i> | {{contact.phone}}</p>
+      <p editable-text="contact.phoneTwo" ng-show="contact.phoneTwo" e-placeholder="Phone Number #2"><i class="fa fa-phone icon" aria-hidden="true"></i> | {{contact.phoneTwo}}</p>
+      <p editable-text="contact.email" ng-show="contact.email" e-placeholder="Email"><i class="fa fa-envelope icon" aria-hidden="true"></i> | {{contact.email}}</p>
+      <p editable-text="contact.address" ng-show="contact.address" e-placeholder="Address"><i class="fa fa-location-arrow icon" aria-hidden="true"></i> | {{contact.address}}</p>
+      <div class="text-center">
+        <button type="button" class="see-btn" ng-click="contactDetails.$show()" ng-show="!contactDetails.$visible">Edit</button>
+        <button ng-click="deleteContact($index)" class="delete-btn" ng-show="!contactDetails.$visible" ng-disabled="contactDetails.$visible">Delete</button>
+      </div>
+      <span ng-show="contactDetails.$visible"> 
+        <div class="text-center">
+          <button type="submit" class="save-btn" ng-disabled="contactDetails.$waiting">
+            Save
+          </button>
+          <button type="button" ng-disabled="contactDetails.$waiting" ng-click="contactDetails.$cancel()">
+            Cancel
+          </button>
+        </div>
+      </span>
+    </form>
   </div>
 </div>

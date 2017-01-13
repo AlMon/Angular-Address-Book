@@ -1,5 +1,60 @@
 /* Project Styles */
+.card {
+  background: #FFF none repeat scroll 0% 0%;
+  border: 0.1rem solid #EFEFEF;
+  border-radius: 0.5rem;
+  display: block;
+  margin: 0px;
+  text-align: left;
+  z-index: 999;
+  padding: 0 1.5rem;
+  margin-top: 9px;
+}
 
+#search-sep { 
+  border: 0; 
+  height: 1px; 
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.contact-name {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.see-btn {
+  margin: 0 0 15px 0;
+  background: transparent;
+  border: 2px solid #E25041;
+  color: #E25041;
+}
+
+.save-btn {
+  background: #d03020;
+  color: #FFF;
+  border: 2px solid #d03020;
+  margin: 0 0 15px 0;
+}
+
+.save-btn:hover {
+  background: transparent;
+  border: 2px solid #E25041;
+  color: #E25041;
+}
+
+.see-btn:hover {
+  background: #d03020;
+  color: #FFF;
+  border: 2px solid #d03020;
+}
+
+.delete-btn {
+  margin: 0 0 15px 0;
+  background: transparent;
+  border: none;
+  color: #000;
+}
 
 /* Universal Styles */
 
@@ -31,7 +86,7 @@ h1 {
   font-size: 11px; 
 }
 
-/* Classes for animations 
+/* Classes for animations */
 .add-btn:disabled, [type="submit"]:disabled, button:disabled {
   background: #FFF;
   border: 1px #777 solid;
@@ -70,5 +125,4 @@ h1 {
 
 .ng-leave.ng-leave-active {
   opacity:0;
-} */
-
+} 
