@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="ab" ng-cloak>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NG Address Book</title>
+    <!-- Angular JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <!-- Angular Animate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
+    <!-- Angular Local Storage -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.5.0/angular-local-storage.min.js"></script>
+    <!-- Angular UI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+    <!-- Angular Truncate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-truncate/0.1.2/truncate.min.js"></script>
+    <!-- Angular Xeditable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.6.0/js/xeditable.min.js"></script>
+    <!-- Xeditable CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.6.0/css/xeditable.min.css">
+    <!-- CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wingcss/0.1.9/wing.min.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- App -->
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+  
+  <div class="container">
+    
+    <div class="col-12">
+      <div class="text-center">
+        <h1 ui-sref="home" id="site-title"><i class="fa fa-address-book icon" aria-hidden="true"></i> Angular Address Book</h1>
+        <p>[Feel free to come back later, your contacts will still be here!]</p>
+      </div>
+    </div>   
+    
+    <ui-view></ui-view>
+    
+    
+    
+    <div class="row">
+      <div class="col-12 credit text-center">
+        <p id="credit">Made With <i class="fa fa-heart project-link" aria-hidden="true"></i> Using <a href="https://angularjs.org/" class="project-link">Angular</a> By <a href="" class="project-link">Al Mondragon</a>. <br>
+        Feel free to check it out on <a href="https://github.com/AlMon/Angular-Address-Book" id="gh-link">Github!</a>
+        </p>
+      </div>
+    </div>
+      
+  </div>
+
+    
+  </body>
+</html>

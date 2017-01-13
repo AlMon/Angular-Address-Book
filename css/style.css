@@ -1,0 +1,74 @@
+/* Project Styles */
+
+
+/* Universal Styles */
+
+#site-title {
+  cursor: pointer;
+}
+
+.icon {
+  color: #E25041;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.project-link {
+  color: #E25041;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#gh-link {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#credit {
+  font-size: 11px; 
+}
+
+/* Classes for animations 
+.add-btn:disabled, [type="submit"]:disabled, button:disabled {
+  background: #FFF;
+  border: 1px #777 solid;
+  color: #777;
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.add-btn {
+  background: #E25041;
+  transition:0.3s linear all;
+  color: #FFF;
+}
+
+.ng-enter {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -ms-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition:0.5s linear all;
+  opacity:0;
+}
+
+.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.ng-leave {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -ms-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition:0.5s linear all;
+  opacity:1;
+}
+
+.ng-leave.ng-leave-active {
+  opacity:0;
+} */
+
