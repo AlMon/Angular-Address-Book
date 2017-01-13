@@ -43,13 +43,17 @@ ab.controller("ContactsCtrl", ["$scope", "localStorageService", "$stateParams", 
     $scope.contacts.unshift({
       name: $scope.name,
       phone: $scope.phone,
+      phoneTwo: $scope.phoneTwo,
       email: $scope.email,
+      address: $scope.address,
       contactId: Date.now()
     });
     localStorageService.set("contactData", $scope.contacts);
     $scope.name = "",
     $scope.phone = "",
-    $scope.email = ""
+    $scope.phoneTwo = "",
+    $scope.email = "",
+    $scope.address = ""
   }
   
   $scope.updateContact = function(){

@@ -1,24 +1,23 @@
 <div class="row" ng-init="getContacts()">
   <div class="col-3">
     <form name="contactForm" ng-submit="addContact()" novalidate>
-      <p class="text-center title">Add Contact:</p>
       <input name="name" type="text" ng-model="name" required placeholder="Contact Name*" ng-required="true">
       <input name="phone" type="text" ng-model="phone" placeholder="Phone Number" ng-required="false">
-      <input name="email" type="email" ng-model="email" required placeholder="Email*" ng-required="true">
+      <input name="phoneTwo" type="text" ng-model="phoneTwo" placeholder="Phone Number #2" ng-required="false">
+      <input name="email" type="email" ng-model="email" placeholder="Email" ng-required="false">
+      <input name="address" type="text" ng-model="address" placeholder="Address" ng-required="false">
       <div class="center">
         <button name="submit" ng-disabled="contactForm.$invalid" class="add-btn">Add Contact</button>
       </div>
     </form>
   </div>
   <div class="col-3" ng-repeat="contact in contacts">    
-    <div class="card">
-      <p class="card-title">{{contact.name}}</p>
-      <p class="card-category">{{contact.number}}</p>
-      <p class="card-body">{{contact.email | characters:75: false}}</p>
-      <div class="text-center">
-        <button ui-sref="contact({id: contact.contactId})" class="see-btn">Contact Details</button>
-        <button ng-click="deleteContact($index)" class="delete-btn">Delete</button>
-      </div>
+    <div>
+      <p ng-show="contact.name"><i class="fa fa-user icon" aria-hidden="true"></i> | {{contact.name}}</p>
+      <p ng-show="contact.phone || contact.phoneTwo"><i class="fa fa-mobile icon" aria-hidden="true"></i> | {{contact.phone}} <span ng-show="contact.phone && contact.phoneTwo">//</span> {{contact.phoneTwo}}</p>
+      <p ng-show="contact.email"><i class="fa fa-envelope icon" aria-hidden="true"></i> | {{contact.email}}</p>
+      <p ng-show="contact.address"><i class="fa fa-location-arrow icon" aria-hidden="true"></i> | {{contact.address}}</p>
+      <button ng-click="deleteContact($index)" class="delete-btn">Delete</button>
     </div>
   </div>
 </div>
