@@ -3,7 +3,7 @@ var ab = angular.module("ab", ["LocalStorageModule", "xeditable", "ngAnimate", "
 
 ab.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", "localStorageServiceProvider", function($stateProvider, $urlRouterProvider, $locationProvider, localStorageServiceProvider){
   localStorageServiceProvider.setPrefix('addressbook');
-  $locationProvider.html5Mode(false)
+  $locationProvider.html5Mode(true)
   .hashPrefix('!');
   
   $urlRouterProvider.otherwise("/");
